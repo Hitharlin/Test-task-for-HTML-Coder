@@ -204,7 +204,7 @@ body {
 }
 
 .slides-section {
-  background-image: url("/images/slide1.webp");
+  background-image: url("./images/slide1.webp");
   object-fit: cover;
   height: 675px;
   width: auto;
@@ -388,7 +388,7 @@ body {
 
 .tools-and-accessories-section {
   border: 1px solid $gray-light;
-  background-image: url("/images/tool.webp");
+  background-image: url("./images/tool.webp");
   background-repeat: no-repeat;
   background-position-x: right;
   object-fit: cover;
