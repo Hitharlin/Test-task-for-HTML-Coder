@@ -1,0 +1,172 @@
+/* Error: Undefined mixin.
+ *     ,
+ * 1   | / @include respond-to(tablet) {
+ * 2   | |   .header {
+ * 3   | |     .primary-navigation {
+ * 4   | |       margin-top: rem(20);
+ * 5   | |       flex-wrap: wrap;
+ * 6   | |       @include flex(space-between, center, rem(20));
+ * 7   | |       .logo {
+ * 8   | |         margin-right: rem(20);
+ * 9   | |         font-size: rem(20);
+ * 10  | |         position: fixed;
+ * 11  | |         top: rem(20);
+ * 12  | |         left: rem(24);
+ * 13  | |       }
+ * 14  | |       .user-data-navigation {
+ * 15  | |         padding-left: 0;
+ * 16  | |         .user-data-item .icon {
+ * 17  | |           font-size: rem(20);
+ * 18  | |         }
+ * 19  | |         .icon-shopping-cart .count {
+ * 20  | |           font-size: rem(8);
+ * 21  | |         }
+ * 22  | |       }
+ * 23  | |       .search-form {
+ * 24  | |         margin-right: auto;
+ * 25  | |         flex: 1;
+ * 26  | |         .search input {
+ * 27  | |           padding-left: 0;
+ * 28  | |         }
+ * 29  | |       }
+ * 30  | |     }
+ * 31  | | 
+ * 32  | |     .utility-navigation {
+ * 33  | |       margin-right: rem(50);
+ * 34  | |       margin-top: rem(10);
+ * 35  | |       gap: rem(10);
+ * 36  | |     }
+ * 37  | | 
+ * 38  | |     #menuToggle {
+ * 39  | |       display: block;
+ * 40  | |       position: fixed;
+ * 41  | |       top: rem(20);
+ * 42  | |       right: rem(24);
+ * 43  | |       z-index: 1;
+ * 44  | |       -webkit-user-select: none;
+ * 45  | |       user-select: none;
+ * 46  | |     }
+ * 47  | | 
+ * 48  | |     #menuCheckbox:checked ~ #menuToggle .burger-line:nth-last-child(3) {
+ * 49  | |       opacity: 0;
+ * 50  | |       transform: rotate(0deg) scale(0.2, 0.2);
+ * 51  | |     }
+ * 52  | |     #menuCheckbox:checked ~ #menuToggle .burger-line:nth-last-child(1) {
+ * 53  | |       transform: rotate(-45deg) translate(0, -1px);
+ * 54  | |     }
+ * 55  | |     #menuCheckbox:checked ~ #menuToggle .burger-line:nth-last-child(2) {
+ * 56  | |       transform: rotate(45deg) translate(-4px, -8px);
+ * 57  | |     }
+ * 58  | |     #menuCheckbox:checked ~ .secondary-navigation-container {
+ * 59  | |       transform: translateX(0);
+ * 60  | |     }
+ * 61  | |     .secondary-navigation-container {
+ * 62  | |       transform: translateX(300px);
+ * 63  | |       transition: transform .3s ease;
+ * 64  | |       flex-direction: column;
+ * 65  | |       position: fixed;
+ * 66  | |       top: 0;
+ * 67  | |       right: 0;
+ * 68  | |       width: 300px;
+ * 69  | |       background-color: #FFFFFF;
+ * 70  | |       bottom: 0;
+ * 71  | |       overflow-y: auto;
+ * 72  | |       margin-top: 0;
+ * 73  | |       align-items: flex-start;
+ * 74  | |       padding: rem(20);
+ * 75  | |       box-shadow: 0 4px 60px rgba(0, 0, 0, .2);
+ * 76  | |       .secondary-navigation {
+ * 77  | |         flex-direction: column;
+ * 78  | |         align-items: flex-start;
+ * 79  | |       }
+ * 80  | |     }
+ * 81  | |     .icon-phone {
+ * 82  | |       font-size: rem(18);
+ * 83  | |     }
+ * 84  | |     .contact-number .number {
+ * 85  | |       font-size: 1rem;
+ * 86  | |     }
+ * 87  | |   }
+ * 88  | | 
+ * 89  | |   .main {
+ * 90  | |     margin-bottom: rem(60);
+ * 91  | |   }
+ * 92  | |   .slides-section {
+ * 93  | |     .slide-change-btn {
+ * 94  | |       right: 0;
+ * 95  | |       left: 0;
+ * 96  | |       justify-content: center;
+ * 97  | |     }
+ * 98  | |     .slider .slide-info-block {
+ * 99  | |       padding-left: rem(60);
+ * 100 | |       .desc {
+ * 101 | |         font-size: rem(38);
+ * 102 | |         line-height: rem(48);
+ * 103 | |       }
+ * 104 | |       .btn {
+ * 105 | |         width: 250px;
+ * 106 | |       }
+ * 107 | |     }
+ * 108 | |   }
+ * 109 | | 
+ * 110 | |   .tools-and-accessories-section .info-block {
+ * 111 | |     margin-left: rem(60);
+ * 112 | |     .btn {
+ * 113 | |       width: 250px;
+ * 114 | |     }
+ * 115 | |   }
+ * 116 | | 
+ * 117 | |   .products-section {
+ * 118 | |     justify-content: space-around;
+ * 119 | |     gap: rem(1);
+ * 120 | |     .item {
+ * 121 | |       .title {
+ * 122 | |         font-size: rem(20);
+ * 123 | |       }
+ * 124 | |       .icon {
+ * 125 | |         font-size: rem(60);
+ * 126 | |       }
+ * 127 | |     }
+ * 128 | |   }
+ * 129 | | 
+ * 130 | |   .footer {
+ * 131 | |     .wrapper {
+ * 132 | |       flex-direction: column-reverse;
+ * 133 | |       width: 100%;
+ * 134 | |       gap: rem(20);
+ * 135 | |       .column-wrapper {
+ * 136 | |         width: 100%;
+ * 137 | |         gap: rem(20);
+ * 138 | |         flex-wrap: wrap;
+ * 139 | |         margin-bottom: 1rem;
+ * 140 | |         .column .title {
+ * 141 | |           margin-bottom: 1rem;
+ * 142 | |         }
+ * 143 | |       }
+ * 144 | |     }
+ * 145 | | 
+ * 146 | |     .subscription-block {
+ * 147 | |       width: 100%;
+ * 148 | |       flex-direction: row;
+ * 149 | |       flex-wrap: wrap;
+ * 150 | |       align-items: center;
+ * 151 | |       .subscription-form {
+ * 152 | |         margin-bottom: 0;
+ * 153 | |         width: calc(100% - 100px)
+ * 154 | |       }
+ * 155 | |     }
+ * 156 | |   }
+ * 157 | \ }
+ *     '
+ *   scss/media.scss 1:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a     \2577 \a 1   \2502  \250c  @include respond-to(tablet) {\a 2   \2502  \2502    .header {\a 3   \2502  \2502      .primary-navigation {\a 4   \2502  \2502        margin-top: rem(20);\a 5   \2502  \2502        flex-wrap: wrap;\a 6   \2502  \2502        @include flex(space-between, center, rem(20));\a 7   \2502  \2502        .logo {\a 8   \2502  \2502          margin-right: rem(20);\a 9   \2502  \2502          font-size: rem(20);\a 10  \2502  \2502          position: fixed;\a 11  \2502  \2502          top: rem(20);\a 12  \2502  \2502          left: rem(24);\a 13  \2502  \2502        }\a 14  \2502  \2502        .user-data-navigation {\a 15  \2502  \2502          padding-left: 0;\a 16  \2502  \2502          .user-data-item .icon {\a 17  \2502  \2502            font-size: rem(20);\a 18  \2502  \2502          }\a 19  \2502  \2502          .icon-shopping-cart .count {\a 20  \2502  \2502            font-size: rem(8);\a 21  \2502  \2502          }\a 22  \2502  \2502        }\a 23  \2502  \2502        .search-form {\a 24  \2502  \2502          margin-right: auto;\a 25  \2502  \2502          flex: 1;\a 26  \2502  \2502          .search input {\a 27  \2502  \2502            padding-left: 0;\a 28  \2502  \2502          }\a 29  \2502  \2502        }\a 30  \2502  \2502      }\a 31  \2502  \2502  \a 32  \2502  \2502      .utility-navigation {\a 33  \2502  \2502        margin-right: rem(50);\a 34  \2502  \2502        margin-top: rem(10);\a 35  \2502  \2502        gap: rem(10);\a 36  \2502  \2502      }\a 37  \2502  \2502  \a 38  \2502  \2502      #menuToggle {\a 39  \2502  \2502        display: block;\a 40  \2502  \2502        position: fixed;\a 41  \2502  \2502        top: rem(20);\a 42  \2502  \2502        right: rem(24);\a 43  \2502  \2502        z-index: 1;\a 44  \2502  \2502        -webkit-user-select: none;\a 45  \2502  \2502        user-select: none;\a 46  \2502  \2502      }\a 47  \2502  \2502  \a 48  \2502  \2502      #menuCheckbox:checked ~ #menuToggle .burger-line:nth-last-child(3) {\a 49  \2502  \2502        opacity: 0;\a 50  \2502  \2502        transform: rotate(0deg) scale(0.2, 0.2);\a 51  \2502  \2502      }\a 52  \2502  \2502      #menuCheckbox:checked ~ #menuToggle .burger-line:nth-last-child(1) {\a 53  \2502  \2502        transform: rotate(-45deg) translate(0, -1px);\a 54  \2502  \2502      }\a 55  \2502  \2502      #menuCheckbox:checked ~ #menuToggle .burger-line:nth-last-child(2) {\a 56  \2502  \2502        transform: rotate(45deg) translate(-4px, -8px);\a 57  \2502  \2502      }\a 58  \2502  \2502      #menuCheckbox:checked ~ .secondary-navigation-container {\a 59  \2502  \2502        transform: translateX(0);\a 60  \2502  \2502      }\a 61  \2502  \2502      .secondary-navigation-container {\a 62  \2502  \2502        transform: translateX(300px);\a 63  \2502  \2502        transition: transform .3s ease;\a 64  \2502  \2502        flex-direction: column;\a 65  \2502  \2502        position: fixed;\a 66  \2502  \2502        top: 0;\a 67  \2502  \2502        right: 0;\a 68  \2502  \2502        width: 300px;\a 69  \2502  \2502        background-color: #FFFFFF;\a 70  \2502  \2502        bottom: 0;\a 71  \2502  \2502        overflow-y: auto;\a 72  \2502  \2502        margin-top: 0;\a 73  \2502  \2502        align-items: flex-start;\a 74  \2502  \2502        padding: rem(20);\a 75  \2502  \2502        box-shadow: 0 4px 60px rgba(0, 0, 0, .2);\a 76  \2502  \2502        .secondary-navigation {\a 77  \2502  \2502          flex-direction: column;\a 78  \2502  \2502          align-items: flex-start;\a 79  \2502  \2502        }\a 80  \2502  \2502      }\a 81  \2502  \2502      .icon-phone {\a 82  \2502  \2502        font-size: rem(18);\a 83  \2502  \2502      }\a 84  \2502  \2502      .contact-number .number {\a 85  \2502  \2502        font-size: 1rem;\a 86  \2502  \2502      }\a 87  \2502  \2502    }\a 88  \2502  \2502  \a 89  \2502  \2502    .main {\a 90  \2502  \2502      margin-bottom: rem(60);\a 91  \2502  \2502    }\a 92  \2502  \2502    .slides-section {\a 93  \2502  \2502      .slide-change-btn {\a 94  \2502  \2502        right: 0;\a 95  \2502  \2502        left: 0;\a 96  \2502  \2502        justify-content: center;\a 97  \2502  \2502      }\a 98  \2502  \2502      .slider .slide-info-block {\a 99  \2502  \2502        padding-left: rem(60);\a 100 \2502  \2502        .desc {\a 101 \2502  \2502          font-size: rem(38);\a 102 \2502  \2502          line-height: rem(48);\a 103 \2502  \2502        }\a 104 \2502  \2502        .btn {\a 105 \2502  \2502          width: 250px;\a 106 \2502  \2502        }\a 107 \2502  \2502      }\a 108 \2502  \2502    }\a 109 \2502  \2502  \a 110 \2502  \2502    .tools-and-accessories-section .info-block {\a 111 \2502  \2502      margin-left: rem(60);\a 112 \2502  \2502      .btn {\a 113 \2502  \2502        width: 250px;\a 114 \2502  \2502      }\a 115 \2502  \2502    }\a 116 \2502  \2502  \a 117 \2502  \2502    .products-section {\a 118 \2502  \2502      justify-content: space-around;\a 119 \2502  \2502      gap: rem(1);\a 120 \2502  \2502      .item {\a 121 \2502  \2502        .title {\a 122 \2502  \2502          font-size: rem(20);\a 123 \2502  \2502        }\a 124 \2502  \2502        .icon {\a 125 \2502  \2502          font-size: rem(60);\a 126 \2502  \2502        }\a 127 \2502  \2502      }\a 128 \2502  \2502    }\a 129 \2502  \2502  \a 130 \2502  \2502    .footer {\a 131 \2502  \2502      .wrapper {\a 132 \2502  \2502        flex-direction: column-reverse;\a 133 \2502  \2502        width: 100%;\a 134 \2502  \2502        gap: rem(20);\a 135 \2502  \2502        .column-wrapper {\a 136 \2502  \2502          width: 100%;\a 137 \2502  \2502          gap: rem(20);\a 138 \2502  \2502          flex-wrap: wrap;\a 139 \2502  \2502          margin-bottom: 1rem;\a 140 \2502  \2502          .column .title {\a 141 \2502  \2502            margin-bottom: 1rem;\a 142 \2502  \2502          }\a 143 \2502  \2502        }\a 144 \2502  \2502      }\a 145 \2502  \2502  \a 146 \2502  \2502      .subscription-block {\a 147 \2502  \2502        width: 100%;\a 148 \2502  \2502        flex-direction: row;\a 149 \2502  \2502        flex-wrap: wrap;\a 150 \2502  \2502        align-items: center;\a 151 \2502  \2502        .subscription-form {\a 152 \2502  \2502          margin-bottom: 0;\a 153 \2502  \2502          width: calc(100% - 100px)\a 154 \2502  \2502        }\a 155 \2502  \2502      }\a 156 \2502  \2502    }\a 157 \2502  \2514  }\a     \2575 \a   scss/media.scss 1:1  root stylesheet";
+}

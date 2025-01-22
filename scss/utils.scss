@@ -1,0 +1,39 @@
+//Fonts
+@font-face {
+  font-family: Inter;
+  src: url(../Fonts/Inter-VariableFont_opsz,wght.ttf);
+}
+
+//Variables
+$primary-color: #212121;
+$secondary-color: #4859F0;
+$gray-dark: #6F6F6F;
+$gray-medium: #9B9591;
+$gray-light: #F5F5F5;
+$black-dark: #1B1B1B;
+$container-size: 1392px;
+
+//Mixins
+@mixin flex($justify: center, $align: center, $gap: null) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+//Functions
+@function rem($px, $base: 16) {
+  @return #{$px / $base}rem;
+}

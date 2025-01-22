@@ -1,0 +1,17 @@
+/* Error: 2 arguments required, but only 1 was passed.
+ *    ,
+ * 27 |   padding: rem(12) rem(24);
+ *    |            ^^^^^^^
+ *    '
+ *   scss/styles.scss 27:12  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: 2 arguments required, but only 1 was passed.\a    \2577 \a 27 \2502    padding: rem(12) rem(24);\a    \2502             ^^^^^^^\a    \2575 \a   scss/styles.scss 27:12  root stylesheet";
+}
